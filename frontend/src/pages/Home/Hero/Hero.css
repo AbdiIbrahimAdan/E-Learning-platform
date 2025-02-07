@@ -1,0 +1,77 @@
+.hero{
+    background: linear-gradient(rgba(233, 227, 227, 0.1), rgba(255, 255, 255, 0.1) ), url("./../../../assets/bg.webp") ;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:black;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    margin-top: 50px;
+ 
+
+}
+.hero .container{
+    text-align: center;
+}
+
+
+.hero.hero-text{
+    color:black;
+    margin: 0;
+    padding: 0;
+}
+.hero .hero-text h1{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.hero .hero-text h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+
+}
+
+.hero .hero-text p{
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+.hero .button{
+    margin-top: 80px;
+}
+.hero .primary-btn{
+    background-color: white;
+    color:rgb(27, 1, 1);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition:  background-color 0.3s ease;
+   
+}
+
+.hero .primary-btn:hover{
+    background-color: #25d17b;
+}
+
+@media screen and (max-width:768px){
+    .hero {
+        height: 60vh;
+        padding-top: 50%;
+      }
+      .hero .hero-text {
+        padding-top: 0;
+      }
+      .hero .hero-text h1 {
+        font-size: 2rem;
+      }
+      .hero .hero-text h2 {
+        font-size: 1.5rem;
+      }
+      .hero .hero-text p {
+        font-size: 1rem;
+      }
+    
+}
