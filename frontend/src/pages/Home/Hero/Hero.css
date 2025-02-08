@@ -1,77 +1,104 @@
-.hero{
-    background: linear-gradient(rgba(233, 227, 227, 0.1), rgba(255, 255, 255, 0.1) ), url("./../../../assets/bg.webp") ;
+.hero {
+    background: linear-gradient(rgba(223, 220, 220, 0.6), rgba(206, 194, 194, 0.6)),
+      url("./../../../assets/bg.webp");
     background-size: cover;
     background-position: center;
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    color:black;
-    padding: 20px;
+    justify-content: flex-start;
+    color: white;
+    padding: 40px;
     box-sizing: border-box;
-    margin-bottom: 50px;
-    margin-top: 50px;
- 
-
-}
-.hero .container{
-    text-align: center;
-}
-
-
-.hero.hero-text{
-    color:black;
-    margin: 0;
-    padding: 0;
-}
-.hero .hero-text h1{
+    margin-top: 20px;
+  }
+  
+  .container {
+    max-width: 900px;
+  }
+  
+  .hero-text {
+   margin-left: -700px;
+    max-width: 600px;
+  }
+  
+  .hero-text h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-.hero .hero-text h2{
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .hero-text h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
-
-}
-
-.hero .hero-text p{
+    margin-top: 20px;
+    margin-left: -250px;
+    color:black;
+  }
+  
+  .hero-text p {
     font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-.hero .button{
-    margin-top: 80px;
-}
-.hero .primary-btn{
-    background-color: white;
-    color:rgb(27, 1, 1);
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition:  background-color 0.3s ease;
-   
-}
-
-.hero .primary-btn:hover{
+    line-height: 1.6;
+  }
+  
+  .hero-text ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .hero-text ul li {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  
+  .hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .primary-btn {
     background-color: #25d17b;
-}
-
-@media screen and (max-width:768px){
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  .primary-btn:hover {
+    background-color: #1aa567;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
     .hero {
-        height: 60vh;
-        padding-top: 50%;
-      }
-      .hero .hero-text {
-        padding-top: 0;
-      }
-      .hero .hero-text h1 {
-        font-size: 2rem;
-      }
-      .hero .hero-text h2 {
-        font-size: 1.5rem;
-      }
-      .hero .hero-text p {
-        font-size: 1rem;
-      }
-    
-}
+      height: 80vh;
+      padding: 20px;
+      justify-content: center;
+    }
+  
+    .hero-text {
+      text-align: left;
+    }
+  
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-text h2 {
+      font-size: 1.5rem;
+    }
+  
+    .hero-text p {
+      font-size: 1rem;
+    }
+  
+    .hero-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
