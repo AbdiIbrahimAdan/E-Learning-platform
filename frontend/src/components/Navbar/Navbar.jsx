@@ -28,7 +28,7 @@ const Navbar = () => {
         <li><Link to="/books" onClick={() => setIsMenuOpen(false)}>Book</Link></li>
         {/* <li><Link to="/bookdetail" onClick={() => setIsMenuOpen(false)}>BookDetail</Link></li> */}
         {/* <li><Link to="/borrowingform" onClick={() => setIsMenuOpen(false)}>BorrowingForm</Link></li> */}
-        <li><Link to="/cart" onClick={() => setIsMenuOpen(false)}>Cart</Link></li>
+        
         {user && user.role === 'Admin' && (
           <li><Link to="/dashboard" onClick={() => setIsMenuOpen(false)}>Dashboard</Link></li>
         )}

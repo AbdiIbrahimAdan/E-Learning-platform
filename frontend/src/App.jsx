@@ -10,7 +10,6 @@ import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 import PrivateRoute from './components/PrivateRoute';
 import Dashboard from './components/Dashboard/Dashboard'; 
-import Cart from './components/Cart/Cart';
 import BookDetail from './pages/BookDetail/BookDetail';
 import BorrowingForm from './pages/BookDetail/BorrowingForm';
 import NotFound from './pages/NotFound';
@@ -25,7 +24,6 @@ const App = () => {
         <Route path="/books" element={<Book />} />
         <Route path="/book/:id" element={<BookDetail />} />
         <Route path="/borrow" element={<BorrowingForm />} />
-        <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         

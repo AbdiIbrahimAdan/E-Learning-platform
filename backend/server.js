@@ -51,14 +51,14 @@ import userRoutes from './routes/userRoutes.js';
 import analyticsRoutes from './routes/analyticsRoutes.js';
 import errorHandler from './utils/errorHandler.js';
 import borrowingRoutes from './routes/borrowingRoutes.js';
-import cartRoutes from './routes/cartRoutes.js';
+
 
 app.use('/api/auth', authRoutes);
 app.use('/api/books', bookRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/borrowings', borrowingRoutes);
-app.use('/api/cart', cartRoutes);
+
 
 app.use(errorHandler);
 
