@@ -29,13 +29,14 @@ export const updateUserRole = async (req, res) => {
     const user = await User.findById(req.params.id);
     if (!user) return res.status(404).json({ message: 'User not found' });
 
-    user.role = req.body.role;
+    user.role = req.body.role; // Can now update to 'Instructor'
     await user.save();
     res.json({ message: `User role updated to ${user.role}` });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
+
 
 // Delete User
 export const deleteUser = async (req, res) => {

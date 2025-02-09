@@ -1,4 +1,4 @@
-import Book from '../models/Book.js';
+import Book from '../models/Course.js';
 import User from '../models/User.js';
 import Borrowing from '../models/Borrowing.js';
 
