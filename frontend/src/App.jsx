@@ -10,6 +10,8 @@ import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 import PrivateRoute from './components/PrivateRoute';
 import Dashboard from './components/Dashboard/Dashboard'; 
+import InstructorDashboard from './pages/Instructor/InstructorDashboard';
+import Student_Dashboard from './pages/Student/Student_Dashboard'
 import BookDetail from './pages/BookDetail/BookDetail';
 import BorrowingForm from './pages/BookDetail/BorrowingForm';
 import NotFound from './pages/NotFound';
@@ -31,7 +33,13 @@ const App = () => {
         <Route element={<PrivateRoute />}>
           <Route path="/dashboard/*" element={<Dashboard />} />
         </Route>
+        <Route element={<PrivateRoute />}>
+          <Route path="/instructor/*" element={<InstructorDashboard />} />
+        </Route>
 
+        <Route element={<PrivateRoute />}>
+          <Route path="/student_dashboard/*" element={<Student_Dashboard />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer/>

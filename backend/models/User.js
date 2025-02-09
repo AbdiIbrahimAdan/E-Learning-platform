@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
     match: [/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/, 'Please enter a valid email']
   },
   password: { type: String, required: true },
-  role: { type: String, enum: ['Admin', 'Instructor', 'User'], default: 'User' }, // Added Instructor
+  role: { type: String, enum: ['Admin', 'Instructor', 'Student'], default: 'Student' }, // Added Instructor
   age: { type: Number, required: true, min: 0 },
   gender: { type: String, enum: ['Male', 'Female', 'Other'], required: true },
   country: { type: String, required: true },

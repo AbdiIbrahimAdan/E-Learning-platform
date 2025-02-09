@@ -39,9 +39,15 @@ const Login = () => {
         if (data.user) {
           setUser(data.user);
           toast.success('Login successful!');
-          data.user.role === 'Admin'
-            ? navigate('/dashboard')
-            : navigate('/');
+          if (data.user.role === 'Admin') {
+            navigate('/dashboard'); 
+          } else if (data.user.role === 'Instructor') {
+            navigate('/instructor'); 
+          } else if (data.user.role === 'Student') {
+            navigate('/student_dashboard'); 
+          }else {
+            navigate('/'); 
+          }
         }
       } catch (error) {
         toast.error(
