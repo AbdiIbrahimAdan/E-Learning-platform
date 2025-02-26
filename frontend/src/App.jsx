@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
-import Book from './pages/Book';
+import Courses from './pages/Courses';
 import Footer from './components/Footer/Footer'
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
@@ -12,8 +12,6 @@ import PrivateRoute from './components/PrivateRoute';
 import Dashboard from './components/Dashboard/Dashboard'; 
 import InstructorDashboard from './pages/Instructor/InstructorDashboard';
 import Student_Dashboard from './pages/Student/Student_Dashboard'
-import BookDetail from './pages/BookDetail/BookDetail';
-import BorrowingForm from './pages/BookDetail/BorrowingForm';
 import NotFound from './pages/NotFound';
 
 const App = () => {
@@ -23,9 +21,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/books" element={<Book />} />
-        <Route path="/book/:id" element={<BookDetail />} />
-        <Route path="/borrow" element={<BorrowingForm />} />
+        <Route path="/courses" element={<Courses />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         

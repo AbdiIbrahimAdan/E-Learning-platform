@@ -2,9 +2,9 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './BookList.css'; 
+import './CoursesList.css'; 
 
-const BookList = () => {
+const CoursesList = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const BookList = () => {
 
   return (
     <div className="book-list-container">
-      <h2>Book List</h2>
+      <h2>Courses List</h2>
       <div className="book-grid">
         {books.map((book) => (
           <div key={book._id} className="book-card">
@@ -39,4 +39,4 @@ const BookList = () => {
   );
 };
 
-export default BookList;
+export default CoursesList;

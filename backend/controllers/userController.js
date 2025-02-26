@@ -29,7 +29,15 @@ export const updateUserRole = async (req, res) => {
     const user = await User.findById(req.params.id);
     if (!user) return res.status(404).json({ message: 'User not found' });
 
-    user.role = req.body.role; // Can now update to 'Instructor'
+    if (user.role === 'SuperAdmin') {
+      return res.status(403).json({ message: 'Cannot change SuperAdmin role' });
+    }
+
+    if (req.user.role !== 'SuperAdmin' && req.body.role === 'Admin') {
+      return res.status(403).json({ message: 'Only SuperAdmin can create Admins' });
+    }
+
+    user.role = req.body.role;
     await user.save();
     res.json({ message: `User role updated to ${user.role}` });
   } catch (error) {
@@ -38,13 +46,21 @@ export const updateUserRole = async (req, res) => {
 };
 
 
+
 // Delete User
 export const deleteUser = async (req, res) => {
   try {
-    const user = await User.findByIdAndDelete(req.params.id);
+    const user = await User.findById(req.params.id);
     if (!user) return res.status(404).json({ message: 'User not found' });
+
+    if (user.role === 'SuperAdmin') {
+      return res.status(403).json({ message: 'Cannot delete SuperAdmin' });
+    }
+
+    await User.findByIdAndDelete(req.params.id);
     res.json({ message: 'User deleted successfully' });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
+

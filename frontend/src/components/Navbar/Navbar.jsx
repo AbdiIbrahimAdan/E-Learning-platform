@@ -26,9 +26,9 @@ const Navbar = () => {
       <ul className={isMenuOpen ? 'active' : ''}>
         <li><Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
         <li><Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link></li>
-        <li><Link to="/books" onClick={() => setIsMenuOpen(false)}>Book</Link></li>
+        <li><Link to="/courses" onClick={() => setIsMenuOpen(false)}>Courses</Link></li>
         
-        {/* Show Dashboard Links Based on User Role */}
+        
         {user && user.role === 'Admin' && (
           <li><Link to="/dashboard" onClick={() => setIsMenuOpen(false)}>Dashboard</Link></li>
         )}

@@ -3,9 +3,9 @@ import { useNavigate, useParams } from 'react-router-dom';
 import Banner from '../components/Banner/Banner';
 import useUserStore from '../store/userStore';
 import { Pie } from 'react-chartjs-2';
-import './Book.css';
+import './Courses.css';
 
-const Book = () => {
+const Courses = () => {
   const { books, fetchBooks } = useUserStore();
   const navigate = useNavigate();
   const { id } = useParams();
@@ -92,4 +92,4 @@ const Book = () => {
   );
 };
 
-export default Book;
+export default Courses;
