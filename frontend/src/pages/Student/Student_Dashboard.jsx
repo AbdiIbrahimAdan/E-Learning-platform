@@ -26,8 +26,7 @@ const Student_Dashboard = () => {
           <div className="welcome-section">
             <h2>Welcome, Instructor!</h2>
             <div className="stats">
-              <p>Total Books: {stats.books}</p>
-              <p>Total Users: {stats.users}</p>
+              
             </div>
           </div>
         );
