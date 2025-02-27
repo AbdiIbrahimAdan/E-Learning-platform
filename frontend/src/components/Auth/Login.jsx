@@ -43,6 +43,9 @@ const Login = () => {
             navigate('/dashboard'); 
           } else if (data.user.role === 'Instructor') {
             navigate('/instructor'); 
+
+          }else if (data.user.role === 'SuperAdmin') {
+              navigate('/superadmin_dashboard'); 
           } else if (data.user.role === 'Student') {
             navigate('/student_dashboard'); 
           }else {

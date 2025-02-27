@@ -33,6 +33,11 @@ const Navbar = () => {
           <li><Link to="/dashboard" onClick={() => setIsMenuOpen(false)}>Dashboard</Link></li>
         )}
         
+        
+        {user && user.role === 'SuperAdmin' && (
+          <li><Link to="/superadmin_dashboard" onClick={() => setIsMenuOpen(false)}>Superadmin-Dashboard</Link></li>
+        )}
+
         {user && user.role === 'Instructor' && (
           <li><Link to="/instructor" onClick={() => setIsMenuOpen(false)}>Instructor Dashboard</Link></li>
         )}

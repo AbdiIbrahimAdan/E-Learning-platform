@@ -9,6 +9,7 @@ import Footer from './components/Footer/Footer'
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 import PrivateRoute from './components/PrivateRoute';
+import Superadmin_Dashboard from './components/Super_Admin/Superadmin_Dashboard';
 import Dashboard from './components/Dashboard/Dashboard'; 
 import InstructorDashboard from './pages/Instructor/InstructorDashboard';
 import Student_Dashboard from './pages/Student/Student_Dashboard'
@@ -29,6 +30,11 @@ const App = () => {
         <Route element={<PrivateRoute />}>
           <Route path="/dashboard/*" element={<Dashboard />} />
         </Route>
+
+        <Route element={<PrivateRoute />}>
+          <Route path="/superadmin_dashboard/*" element={<Superadmin_Dashboard />} />
+        </Route>
+
         <Route element={<PrivateRoute />}>
           <Route path="/instructor/*" element={<InstructorDashboard />} />
         </Route>

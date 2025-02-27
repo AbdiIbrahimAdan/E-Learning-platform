@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import './Superadmin-Dashboard.css';
+import './Superadmin_Dashboard.css';
 import CoursesList from './Course/CoursesList';
 
-import ManageUsers from '../Dashboard/ManageUser/ManageUsers';
+import ManageUsers from '../Super_Admin/ManageUser/ManageUsers.jsx';
 import useUserStore from '../../store/userStore';
 
-import AnalyticsUsers  from  '../Dashboard/Analytics/AnalyticsUsers';
+import AnalyticsUsers  from  './Analytics/AnalyticsUsers';
 
-const SuperadminDashboard = () => {
-  const { stats, fetchUsers, fetchBooks } = useUserStore();
+const Superadmin_Dashboard= () => {
+  const { stats, fetchUsers} = useUserStore();
   const [activeSection, setActiveSection] = useState('welcome');
 
   useEffect(() => {
     fetchUsers();
-    fetchBooks();
-  }, [fetchUsers, fetchBooks]);
+   
+  }, [fetchUsers]);
 
   const renderContent = () => {
     switch (activeSection) {
@@ -31,7 +31,7 @@ const SuperadminDashboard = () => {
           <div className="welcome-section">
             <h2>Welcome, Admin!</h2>
             <div className="stats">
-              <p>Total Courses: {stats.books}</p>
+              {/* <p>Total Courses: {stats.course}</p> */}
               <p>Total Users: {stats.users}</p>
             </div>
           </div>
@@ -57,4 +57,4 @@ const SuperadminDashboard = () => {
   );
 };
 
-export default SuperadminDashboard;
+export default Superadmin_Dashboard;

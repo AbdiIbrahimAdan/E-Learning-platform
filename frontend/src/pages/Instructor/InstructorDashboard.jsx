@@ -8,13 +8,13 @@ import Messages  from  '../Instructor/Messages/Messages';
 import EnrolledStudents from '../Instructor/Enrollment/EnrolledStudents';
 
 const InstructorDashboard = () => {
-  const { stats, fetchUsers, fetchBooks } = useUserStore();
+  const { stats, fetchUsers } = useUserStore();
   const [activeSection, setActiveSection] = useState('welcome');
 
   useEffect(() => {
     fetchUsers();
-    fetchBooks();
-  }, [fetchUsers, fetchBooks]);
+    
+  }, [fetchUsers]);
 
   const renderContent = () => {
     switch (activeSection) {
@@ -33,7 +33,7 @@ const InstructorDashboard = () => {
           <div className="welcome-section">
             <h2>Welcome, Instructor!</h2>
             <div className="stats">
-              <p>Total Books: {stats.books}</p>
+              {/* <p>Total Course: {stats.course}</p> */}
               <p>Total Users: {stats.users}</p>
             </div>
           </div>

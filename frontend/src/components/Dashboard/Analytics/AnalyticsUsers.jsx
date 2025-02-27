@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { Chart as ChartJS, ArcElement, BarElement, LineElement, PointElement, CategoryScale, LinearScale, Title, Tooltip, Legend } from 'chart.js';
 import { Bar, Pie, Line } from 'react-chartjs-2';
-import useUserStore from '../../../store/userStore';
+import useUserStore from '../../../store/User';
 import './AnalyticsUsers.css';
 
 ChartJS.register(

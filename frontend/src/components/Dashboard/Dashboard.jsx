@@ -8,13 +8,13 @@ import AnalyticsDashboard from '../Dashboard/Analytics/AnalyticsDashboard';
 import AnalyticsUsers  from  '../Dashboard/Analytics/AnalyticsUsers';
 
 const Dashboard = () => {
-  const { stats, fetchUsers, fetchBooks } = useUserStore();
+  const { stats, fetchUsers} = useUserStore();
   const [activeSection, setActiveSection] = useState('welcome');
 
   useEffect(() => {
     fetchUsers();
-    fetchBooks();
-  }, [fetchUsers, fetchBooks]);
+    
+  }, [fetchUsers]);
 
   const renderContent = () => {
     switch (activeSection) {
@@ -33,8 +33,8 @@ const Dashboard = () => {
           <div className="welcome-section">
             <h2>Welcome, Admin!</h2>
             <div className="stats">
-              <p>Total Courses: {stats.books}</p>
-              <p>Total Users: {stats.users}</p>
+              {/* <p>Total Courses: {stats.course}</p> */}
+              {/* <p>Total Users: {stats.users}</p> */}
             </div>
           </div>
         );

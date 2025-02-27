@@ -5,13 +5,13 @@ import useUserStore from '../../store/userStore';
 import Notifications from '../Instructor/Notifications/Notifications'; 
 import Messages  from  '../Instructor/Messages/Messages';
 const Student_Dashboard = () => {
-  const { stats, fetchUsers, fetchBooks } = useUserStore();
+  const { stats, fetchUsers} = useUserStore();
   const [activeSection, setActiveSection] = useState('welcome');
 
   useEffect(() => {
     fetchUsers();
-    fetchBooks();
-  }, [fetchUsers, fetchBooks]);
+    
+  }, [fetchUsers]);
 
   const renderContent = () => {
     switch (activeSection) {
