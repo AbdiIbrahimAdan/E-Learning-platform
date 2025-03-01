@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './InstructorDashboard.css';
 import ManageCourses from '../Instructor/ManageCourses/ManageCourses';
 import ProgressTracking from '../Instructor/ProgressTracking/ProgressTracking';
-import useUserStore from '../../store/userStore';
+import useUserStore from '../../store/User';
 import Notifications from '../Instructor/Notifications/Notifications'; 
 import Messages  from  '../Instructor/Messages/Messages';
 import EnrolledStudents from '../Instructor/Enrollment/EnrolledStudents';

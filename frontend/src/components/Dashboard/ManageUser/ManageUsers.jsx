@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
-import useUserStore from '../../../store/userStore';
+import useUserStore from '../../../store/User';
 import './ManageUsers.css';
 
 const ManageUsers = () => {
   const { users, fetchUsers } = useUserStore();
 
   useEffect(() => {
-    fetchUsers(); // Fetch users on mount
+    fetchUsers(); 
   }, [fetchUsers]);
 
   if (!users || users.length === 0) {
-    return <p>No users available.</p>; // Display empty message if no users
+    return <p>No users available.</p>; 
   }
 
   return (
