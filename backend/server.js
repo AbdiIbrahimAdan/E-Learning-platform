@@ -49,6 +49,7 @@ import authRoutes from './routes/authRoutes.js';
 import courseRoutes from './routes/courseRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import analyticsRoutes from './routes/analyticsRoutes.js';
+import instructor from './routes/instructor.js'
 import errorHandler from './utils/errorHandler.js';
 import superAdminRoutes from './routes/superAdminRoutes.js';
 
@@ -57,6 +58,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/course', courseRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/analytics', analyticsRoutes);
+app.use('/api/instructor', instructor);
 app.use('/api/superadmin', superAdminRoutes);
 
 
